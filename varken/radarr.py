@@ -31,7 +31,7 @@ class RadarrAPI(object):
             return
 
         movies = []
-        for movie in get
+        for movie in get:
             try:
                 movies.append(RadarrMovie(**movie))
             except TypeError as e:
