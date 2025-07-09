@@ -30,13 +30,13 @@ class RadarrAPI(object):
         if not get:
             return
 
-        try:
-            movies = [RadarrMovie(**movie) for movie in get]
-        except TypeError as e:
-        
-            self.logger.error('TypeError has occurred : %s while creating RadarrMovie structure for movie. Data '
-                                  'attempted is: %s', e, get)
-            return
+        movies = []
+        for movie in get
+            try:
+                movies.append(RadarrMovie(**movie))
+            except TypeError as e:
+                self.logger.error('TypeError has occurred : %s while creating RadarrMovie structure for show. Data '
+                                  'attempted is: %s', e, movie)
 
         for movie in movies:
             if movie.monitored and not movie.hasFile:
