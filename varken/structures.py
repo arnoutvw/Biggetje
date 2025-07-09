@@ -223,9 +223,12 @@ class SonarrTVShow(NamedTuple):
     images: list = None
     imdbId: str = None
     languageProfileId: int = None
+    lastAired: str = None
     monitored: bool = None
+    monitorNewItems: str = None
     nextAiring: str = None
     network: str = None
+    originalLanguage: list = None
     overview: str = None
     path: str = None
     previousAiring: str = None
@@ -242,6 +245,7 @@ class SonarrTVShow(NamedTuple):
     tags: list = None
     title: str = None
     titleSlug: str = None
+    tmdbId: int = None
     tvdbId: int = None
     tvMazeId: int = None
     tvRageId: int = None
@@ -255,6 +259,7 @@ class SonarrEpisode(NamedTuple):
     airDateUtc: str = None
     episodeFileId: int = None
     episodeNumber: int = None
+    finaleType: str = None
     grabbed: bool = None
     hasFile: bool = None
     id: int = None
@@ -265,6 +270,7 @@ class SonarrEpisode(NamedTuple):
     seasonNumber: int = None
     seriesId: int = None
     title: str = None
+    tvdbId: str = None
     unverifiedSceneNumbering: bool = None
     sceneAbsoluteEpisodeNumber: int = None
     sceneEpisodeNumber: int = None
@@ -317,6 +323,7 @@ class RadarrMovie(NamedTuple):
     minimumAvailability: str = None
     monitored: bool = None
     movieFile: dict = None
+    movieFileId: int = None
     originalTitle: str = None
     overview: str = None
     path: str = None
