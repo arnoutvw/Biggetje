@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag biggetje:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/arnoutvw/biggetje:latest
     - name: Push docker image
       run: docker push ghcr.io/arnoutvw/biggetje:latest
