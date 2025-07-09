@@ -258,6 +258,7 @@ class SonarrEpisode(NamedTuple):
     grabbed: bool = None
     hasFile: bool = None
     id: int = None
+    lastSearchTime: str = None
     monitored: bool = None
     runtime: int = None
     overview: str = None
@@ -322,6 +323,7 @@ class RadarrMovie(NamedTuple):
     physicalRelease: str = None
     qualityProfileId: int = None
     ratings: dict = None
+    releaseDate: str = None
     runtime: int = None
     secondaryYear: int = None
     secondaryYearSourceId: int = None
