@@ -33,7 +33,9 @@ class RadarrAPI(object):
         try:
             movies = [RadarrMovie(**movie) for movie in get]
         except TypeError as e:
-            self.logger.error('TypeError has occurred : %s while creating RadarrMovie structure', e)
+        
+            self.logger.error('TypeError has occurred : %s while creating RadarrMovie structure for movie. Data '
+                                  'attempted is: %s', e, get)
             return
 
         for movie in movies:
